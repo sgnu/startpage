@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Welcome</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="Startpage.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="colors.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div id="modal">
+    <div class="head">Shortcuts</div>
+    <ul>
+      <li>g: Google search</li>
+      <li>y: YouTube search</li>
+      <li>/r/: go to a subreddit</li>
+      <li>m: MangaDex search</li>
+      <li>wi: Wikipedia search</li>
+      <li>dict: Merriam-Webster dictionary search</li>
+      <li>wa: Wolfram Alpha search</li>
+    </ul>
+  </div>
+
+  <div id="main">
+    <div id="top">
+      <div id="search-container">
+        <input autocomplete="off" autocorrect="off" autocapitalize="off" type="text" id="search" name="site"
+          spellcheck="false" onfocus="showList()" onblur="hideList()" autofocus>
+      </div>
+      <h1 id="time"></h1>
+      <h3 id="date"></h3>
+    </div>
+
+    <div id="links"></div>
+
+    <div id="center-container">
+      <h1 id="greeting"></h1>
+      <h3 id="weather"></h3>
+    </div>
+
+  </div>
+
+  <div id="extra">
+    <textarea id="notes" rows="5"></textarea>
+
+    <div id="edit-container">
+    </div>
+
+    <div id="add-container">
+      <p>Name</p>
+      <input type="text" id="sitename">
+      <p>URL</p>
+      <input type="text" id="siteurl">
+      <button type="button" onclick="addSite()">Add</button>
+    </div>
+
+    <div id="settings">
+      <div class="setblock">
+        <p>Always Dark Mode</p>
+        <label class="switch">
+          <input type="checkbox" id="dark-switch">
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="setblock">
+        <p>Use GIF Wallpapers</p>
+        <label class="switch">
+          <input type="checkbox" id="gif-walls">
+          <span class="slider"></span>
+        </label>
+      </div>
+
+    </div>
+  </div>
+
+
+  <script src="newjs.js"></script>
+</body>
+
+</html>
